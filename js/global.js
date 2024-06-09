@@ -3,7 +3,7 @@
     const isLogged = localStorage.getItem('logged');
   
     if (isLogged !== 'true')
-      window.location.href = '/tela-de-login/login.html';
+      window.location.href = '/help-up/tela-de-login/login.html';
     return null
   })
 })()
