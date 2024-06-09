@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Projeto Saúde</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav__logo"><img src="./assets/Inserir_um_título__1_-removebg-preview.png"></div>
+            <ul class="nav__links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="faq.html">Faq</a></li>
+                <li class="link"><a href="lances.html">Lances</a></li>
+                <li class="link"><a href="https://wa.me/5585988939465" target="_blank">Contato</a></li>
+            </ul>
+            <div id="auth-actions" class="nav_buttons">
+                <a href="./tela-de-login/login.html"><button class="btn">Login </button></a>
+                <a href="./tela-de-login/registro.html"><button class="btn">Registrar-se</button></a>
+            </div>
+        </nav>
+
+        <body>
+            <h1 style="text-align: center; padding-bottom: 30px;">Dúvidas Frequentes</h1>
+            <ul>
+                <button type="button" class="collapsible">Como são os lances?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+                <button type="button" class="collapsible">Quem são os profissionais?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+                <button type="button" class="collapsible">Os Profissionais são confiaveis?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+                <button type="button" class="collapsible">Qual o valor minimo?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+                <button type="button" class="collapsible">irei conseguir consulta com o valor minimo?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+                <button type="button" class="collapsible">Meus dados estão seguros?</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet. Eos doloremque doloremque aut accusantium dolor ab perspiciatis vero
+                        sed
+                        voluptatibus Quis nam cumque mollitia et rerum repudiandae. In iure delectus et officia
+                        asperiores aut
+                        odit amet et molestiae officia ea omnis voluptas cum facilis dicta vel enim dolore.</p>
+                </div>
+            </ul>
+        </body>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        
+            if (localStorage.getItem('logged') === 'true') {
+                const authActions = document.getElementById('auth-actions');
+                authActions.innerHTML = '<a id="logout" href="#"><button class="btn">Sair</button></a>'
+
+                document.getElementById('logout').addEventListener('click', (e) => {
+                    localStorage.setItem('logged', 'false')
+                    window.location.href = '/'
+                })
+            }
+        </script>
+
+
+</html>

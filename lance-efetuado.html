@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Saúde</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            background-image: url("lance-efetuado.webp");
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #4CAF50; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(0, 0, 0);
+        }
+
+        .footer__links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .link_footer a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .link_footer a:hover {
+            color: #45a049;
+        }
+
+        .footer_logo img {
+            width: 80px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Compra efetuada com sucesso</h1>
+        <p>Obrigado por utilizar nossos serviços. Seu lance foi enviado e um profissional entrará em contato em breve.</p>
+        <a href="/index.html" class="btn">Aperte aqui para voltar para a página inicial</a>
+    </div>
+
+    <footer>
+        <div class="footer_logo">
+            <img src="./assets/Inserir_um_título__1_-removebg-preview.png" alt="Logo">
+        </div>
+        <ul class="footer__links">
+            <li class="link_footer"><a href="#">&copy; Todos os direitos reservados ao time de estudantes de ciência da computação.</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

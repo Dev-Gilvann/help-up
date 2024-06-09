@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/lances.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Projeto Saúde</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav__logo"><img src="./assets/Inserir_um_título__1_-removebg-preview.png"></div>
+            <ul class="nav__links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="faq.html">Faq</a></li>
+                <li class="link"><a href="lances.html">Lances</a></li>
+                <li class="link"><a href="https://wa.me/5585988939465" target="_blank">Contato</a></li>
+            </ul>
+            <div id="auth-actions" class="nav_buttons">
+                <a href="./tela-de-login/login.html"><button class="btn">Login </button></a>
+                <a href="./tela-de-login/registro.html"><button class="btn">Registrar-se</button></a>
+            </div>
+        </nav>
+
+        <div class="formulario__wrapper">
+            <form id="form-lance" class="formulario">
+                <h2>Faça seu lance</h2>
+                <div class="slider-container">
+                    <label for="preco">Preço do lance:</label>
+                    <input 
+                        id="preco"
+                        type="range" 
+                        name="preco" 
+                        min="60" 
+                        max="600" 
+                        step="10" 
+                        list="valores" 
+                        required
+                    >
+                    <datalist id="valores">
+                        <option value="60">R$ 60</option>
+                        <option value="100">R$ 100</option>
+                        <option value="150">R$ 150</option>
+                        <option value="200">R$ 200</option>
+                        <option value="250">R$ 250</option>
+                        <option value="300">R$ 300</option>
+                        <option value="350">R$ 350</option>
+                        <option value="400">R$ 400</option>
+                        <option value="450">R$ 450</option>
+                        <option value="500">R$ 500</option>
+                        <option value="550">R$ 550</option>
+                        <option value="600">R$ 600</option>
+                    </datalist>
+                    <span id="preco-value" class="preco-value">100</span>
+                </div>
+                <label for="especialidade">Especialidade:</label>
+                <select id="especialidade" name="especialidade" required>
+                    <option value="psicologo">Psicólogo</option>
+                    <option value="terapeuta">Terapeuta</option>
+                    <option value="psiquiatra">Psiquiatra</option>
+                </select><br><br>
+                <button type="submit">Efetuar Lance</button>
+            </form>
+        </div>
+
+        <script src="./js/global.js"></script>
+        <script>
+            const slider = document.getElementById("preco");
+            const output = document.getElementById("preco-value");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+
+            document.getElementById('form-lance').addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                window.location.href = '/lance-efetuado.html'
+            });
+
+            if (localStorage.getItem('logged') === 'true') {
+                window.addEventListener('load', (e) => {
+                    const authActions = document.getElementById('auth-actions');
+                    authActions.innerHTML = '<a id="logout" href="#"><button class="btn">Sair</button></a>'
+                    
+                    document.getElementById('logout').addEventListener('click', (e) => {
+                        localStorage.setItem('logged', 'false')
+                        window.location.href = '/'
+                    })
+                });                
+            }
+
+            
+        </script>
+
+
+</html>

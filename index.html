@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Projeto Saúde</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav__logo"><img src="./assets/Inserir_um_título__1_-removebg-preview.png"></div>
+      <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="faq.html">Faq</a></li>
+          <li class="link"><a href="lances.html">Lances</a></li>
+          <li class="link"><a href="https://wa.me/5585985970613" target="_blank">Contato</a></li>
+      </ul>
+      <div id="auth-actions" class="nav_buttons">
+          <a href="./tela-de-login/login.html"><button class="btn">Login </button></a>
+          <a href="./tela-de-login/registro.html"><button class="btn">Registrar-se</button></a>
+      </div>
+  </nav>
+    <header class="header">
+      <div class="content">
+        <h1><span>Faça Consultas</span><br />
+          Rápidas e Acessíveis</h1>
+        <p>
+          Consultas com Profissionais
+          de saúde a partir de R$ 100,00
+        </p>
+        <button class="btn">Use nossos serviços</button>
+      </div>
+      <div class="image">
+        <span class="image__bg"></span>
+        <img src="assets/header-bg.png" alt="header image" />
+        <div class="image__content image__content__1">
+          <span><i class="ri-user-3-line"></i></span>
+          <div class="details">
+            <h4>1520+</h4>
+            <p>Clientes ativos</p>
+          </div>
+        </div>
+        <div class="image__content image__content__2">
+          <ul>
+            <li>
+              <span><i class="ri-check-line"></i></span>
+              Pegue 20% de desconto em sua primeira consulta
+            </li>
+            <li>
+              <span><i class="ri-check-line"></i></span>
+              Médicos experientes
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+  <aside>
+
+  </aside>
+  <footer>
+
+    <div class="footer_logo"><img src="./assets/Inserir_um_título__1_-removebg-preview.png"></div>
+    <ul class="footer__links">
+      <li class="link_footer"><a href="#">&copy todos os direitos reservados ao time de estudantes de ciência da
+          computação.</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('logged') === 'true') {
+      const authActions = document.getElementById('auth-actions');
+      authActions.innerHTML = '<a id="logout" href="#"><button class="btn">Sair</button></a>'
+
+      document.getElementById('logout').addEventListener('click', (e) => {
+        localStorage.setItem('logged', 'false')
+        window.location.href = '/'
+      })
+    }
+  </script>
+
+</body>
+
+</html>

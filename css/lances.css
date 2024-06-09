@@ -1,0 +1,71 @@
+
+.formulario__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .formulario {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); 
+      max-width: 700px; /
+  }
+  
+  .formulario h2 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .formulario label {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+  
+  .formulario input[type="text"],
+  .formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formulario button[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .formulario .slider-container {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .formulario input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .formulario #preco-value {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .preco-value::before {
+    content: "R$ ";
+}
+
+  
